@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.viralsonawala.articles.model.ArticlesResp.Article.Author" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/chip_background">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_person_white"
+            app:circle_image_url="@{item.picture}"
+            app:placeholder="@{@drawable/ic_person_white}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingEnd="8dp"
+            android:paddingStart="6dp"
+            android:text="@{item.fullName}"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            tools:text="Viral" />
+
+    </LinearLayout>
+</layout>

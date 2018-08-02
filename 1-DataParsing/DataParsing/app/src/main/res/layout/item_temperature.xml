@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.viralsonawala.dataparsing.model.WeatherData" />
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:text="@{item.year}"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                tools:text="2018" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"JAN"}'
+                    app:value="@{item.jan}" />
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"FEB"}'
+                    app:value="@{item.feb}" />
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"MAR"}'
+                    app:value="@{item.mar}" />
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"APR"}'
+                    app:value="@{item.apr}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"MAY"}'
+                    app:value="@{item.may}" />
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"JUN"}'
+                    app:value="@{item.jun}" />
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"JUL"}'
+                    app:value="@{item.jul}" />
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"AUG"}'
+                    app:value="@{item.aug}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"SEP"}'
+                    app:value="@{item.sep}" />
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"OCT"}'
+                    app:value="@{item.oct}" />
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"NOV"}'
+                    app:value="@{item.nov}" />
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"DEC"}'
+                    app:value="@{item.dec}" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"WIN"}'
+                    app:value="@{item.win}" />
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"SPR"}'
+                    app:value="@{item.spr}" />
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"SUM"}'
+                    app:value="@{item.sum}" />
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"AUT"}'
+                    app:value="@{item.aut}" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    layout="@layout/include_month_item"
+                    app:title='@{"ANN"}'
+                    app:value="@{item.ann}" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>
